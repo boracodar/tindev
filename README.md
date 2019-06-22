@@ -1,24 +1,7 @@
-# README
+# TinDev
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tinder for Developers :p
 
-Things you may want to cover:
+Disclaimer: this is **not** a real app.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app was developed during a YouTube LIVE and you can find more information (in Portuguese) here: https://www.lucascaton.com.br/lives (check out episode #012).
