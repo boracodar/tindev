@@ -34,5 +34,17 @@ RSpec.describe 'Programming languages endpoints', type: :request do
         creator: 'Matz'
       )
     end
+
+    it 'returns the correct HTTP status' do
+      get '/api/v1/programming_languages'
+
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'returns the correct content_type' do
+      get '/api/v1/programming_languages'
+
+      expect(response.content_type).to eq('application/json')
+    end
   end
 end
