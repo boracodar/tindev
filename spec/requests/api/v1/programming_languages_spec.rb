@@ -49,4 +49,36 @@ RSpec.describe 'Programming languages endpoints', type: :request do
       end
     end
   end
+
+  context 'POST create' do
+    it 'creates a post' do
+      expect do
+        post '/api/v1/programming_languages', params: {
+          programming_language: {
+            name: 'Ruby',
+            release_year: '1995',
+            creator: 'Matz'
+          }
+        }
+      end.to change(ProgrammingLanguage, :count).by(1)
+    end
+
+    # TODO: create spec to make sure the proper attributes are being set
+
+    it 'returns the correct HTTP status' do
+      post '/api/v1/programming_languages', params: {
+        programming_language: attributes_for(:programming_language)
+      }
+
+      expect(response).to have_http_status(:created)
+    end
+
+    it 'returns the correct content_type' do
+      post '/api/v1/programming_languages', params: {
+        programming_language: attributes_for(:programming_language)
+      }
+
+      expect(response.content_type).to eq('application/json')
+    end
+  end
 end
