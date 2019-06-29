@@ -9,8 +9,8 @@ RSpec.describe 'Programming languages endpoints', type: :request do
 
   context 'when there are programming languages' do
     before do
-      ProgrammingLanguage.create name: 'Ruby', release_year: '1995', creator: 'Matz'
-      ProgrammingLanguage.create name: 'Lisp', release_year: '1958', creator: 'John McCarthy'
+      FactoryBot.create(:programming_language, name: 'Ruby', release_year: '1995', creator: 'Matz')
+      FactoryBot.create(:programming_language, name: 'Lisp', release_year: '1958', creator: 'John McCarthy')
     end
 
     it 'returns 2 items' do
